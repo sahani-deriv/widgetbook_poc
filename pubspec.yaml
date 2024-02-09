@@ -1,0 +1,31 @@
+name: widgetbook_poc
+description: A new Flutter project.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.1.4 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  deriv_ui:
+    git:
+      url: git@github.com:regentmarkets/flutter-deriv-packages.git
+      path: packages/deriv_ui
+      ref: deriv_ui-v0.0.3+1
+  cupertino_icons: ^1.0.2
+  widgetbook_annotation: ^3.1.0
+  widgetbook: ^3.7.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+  widgetbook_generator: ^3.7.0
+  build_runner: ^2.4.8
+
+flutter:
+  uses-material-design: true
