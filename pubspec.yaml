@@ -11,9 +11,15 @@ dependencies:
     sdk: flutter
   deriv_ui:
     git:
-      url: git@github.com:regentmarkets/flutter-deriv-packages.git
+      url: git@github.com:sahani-deriv/flutter-deriv-packages.git
       path: packages/deriv_ui
-      ref: deriv_ui-v0.0.3+1
+      ref: date
+  deriv_theme:
+    git:
+      url: git@github.com:regentmarkets/flutter-deriv-packages.git
+      path: packages/deriv_theme
+      ref: deriv_theme-v2.2.0
+
   cupertino_icons: ^1.0.2
   widgetbook_annotation: ^3.1.0
   widgetbook: ^3.7.1

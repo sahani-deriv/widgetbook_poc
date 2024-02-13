@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:deriv_ui/deriv_ui.dart';
+import 'package:widgetbook/widgetbook.dart';
 import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
 @widgetbook.UseCase(
@@ -9,7 +10,10 @@ import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 Widget secondaryButtonEnabledUseCase(BuildContext context) {
   return SecondaryButton(
     onPressed: () {},
-    child: const Text('Enabled Primary Button'),
+    child: Text(context.knobs.string(
+      label: 'Button Text',
+      initialValue: 'Text',
+    )),
   );
 }
 
@@ -21,6 +25,11 @@ Widget secondaryButtonDisabledUseCase(BuildContext context) {
   return SecondaryButton(
     onPressed: () {},
     isEnabled: false,
-    child: const Text('Disabled Primary Button'),
+    child: Text(
+      context.knobs.string(
+        label: 'Button Text',
+        initialValue: 'Text',
+      ),
+    ),
   );
 }

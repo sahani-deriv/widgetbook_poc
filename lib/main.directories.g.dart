@@ -10,12 +10,68 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:widgetbook/widgetbook.dart' as _i1;
-import 'package:widgetbook_poc/components/buttons/primary_button_usecase.dart'
+import 'package:widgetbook_poc/components/date_range_picker_usecase.dart'
     as _i2;
-import 'package:widgetbook_poc/components/buttons/secondary_button_usecase.dart'
+import 'package:widgetbook_poc/components/dialog_usecase.dart' as _i4;
+import 'package:widgetbook_poc/components/expandable_bottom_sheet_usecase.dart'
     as _i3;
+import 'package:widgetbook_poc/widgets/buttons/primary_button_usecase.dart'
+    as _i5;
+import 'package:widgetbook_poc/widgets/buttons/secondary_button_usecase.dart'
+    as _i6;
 
 final directories = <_i1.WidgetbookNode>[
+  _i1.WidgetbookFolder(
+    name: 'components',
+    children: [
+      _i1.WidgetbookFolder(
+        name: 'date_range_picker',
+        children: [
+          _i1.WidgetbookFolder(
+            name: 'widgets',
+            children: [
+              _i1.WidgetbookLeafComponent(
+                name: 'DerivDateRangePicker',
+                useCase: _i1.WidgetbookUseCase(
+                  name: 'DateRangePicker calendar mode',
+                  builder: _i2.dateRangePickerUseCase,
+                ),
+              )
+            ],
+          )
+        ],
+      ),
+      _i1.WidgetbookFolder(
+        name: 'expandable_bottom_sheet',
+        children: [
+          _i1.WidgetbookFolder(
+            name: 'widgets',
+            children: [
+              _i1.WidgetbookLeafComponent(
+                name: 'ExpandableBottomSheet',
+                useCase: _i1.WidgetbookUseCase(
+                  name: 'expanded',
+                  builder: _i3.expandableBottomSheetExpandedUseCase,
+                ),
+              )
+            ],
+          )
+        ],
+      ),
+    ],
+  ),
+  _i1.WidgetbookFolder(
+    name: 'material',
+    children: [
+      _i1.WidgetbookLeafComponent(
+        name: 'AlertDialog',
+        useCase: _i1.WidgetbookUseCase(
+          name: 'Dialog',
+          builder: _i4.dialogUseCase,
+        ),
+      )
+    ],
+  ),
   _i1.WidgetbookFolder(
     name: 'widgets',
     children: [
@@ -24,11 +80,11 @@ final directories = <_i1.WidgetbookNode>[
         useCases: [
           _i1.WidgetbookUseCase(
             name: 'disabled',
-            builder: _i2.primaryButtonDisabledUseCase,
+            builder: _i5.primaryButtonDisabledUseCase,
           ),
           _i1.WidgetbookUseCase(
             name: 'enabled',
-            builder: _i2.primaryButtonEnabledUseCase,
+            builder: _i5.primaryButtonEnabledUseCase,
           ),
         ],
       ),
@@ -37,14 +93,14 @@ final directories = <_i1.WidgetbookNode>[
         useCases: [
           _i1.WidgetbookUseCase(
             name: 'disabled',
-            builder: _i3.secondaryButtonDisabledUseCase,
+            builder: _i6.secondaryButtonDisabledUseCase,
           ),
           _i1.WidgetbookUseCase(
             name: 'enabled',
-            builder: _i3.secondaryButtonEnabledUseCase,
+            builder: _i6.secondaryButtonEnabledUseCase,
           ),
         ],
       ),
     ],
-  )
+  ),
 ];
